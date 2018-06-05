@@ -42,12 +42,21 @@ bot.on('message', message => {
                 embed: {
                     color: 0xff0000,
                     fields: [{
-                        name: "Normal Commands : ",
-                        value:
-                            "`1.` -help\n`2.` -avatar \n`3.` -ping \n`4.` -server \n`5.` -me ",
                         name: "Music Commands  :",
                         value:
                             "`1.` -play\n`2.` -skip \n`3.` -pause \n`4.` -queue \n`5.` -resume \n`6.` -volume\n`7.` -leave \n`8.` -clearqueue "
+                    
+                    }]
+                }
+            })
+            channel.send({
+                embed: {
+                    color: 0xff0000,
+                    fields: [{
+                        name: "Normal Commands : ",
+                        value:
+                            "`1.` -help\n`2.` -avatar \n`3.` -ping \n`4.` -server \n`5.` -me ",
+                       
                     }]
                 }
             })
