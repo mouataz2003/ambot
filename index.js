@@ -36,7 +36,7 @@ bot.on('message', message => {
     }
 
     if (command === 'help') {
-        message.channel.send(" go check your Direct Message ??")
+        message.channel.send(" go check your Direct Message 😄")
         message.author.createDM().then(channel => {
             return channel.send({
                 embed: {
@@ -74,9 +74,6 @@ bot.on('message', message => {
         message.channel.send(`Ton nom : ${message.author.username}`)
     }
 
-    if (command === 'invite-me') {
-        message.channel.send(` Invite : \n `+ message.guild.getInvite() )
-    }
 
 
 
