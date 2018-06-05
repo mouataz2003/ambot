@@ -44,15 +44,13 @@ bot.on('message', message => {
                     fields: [{
                         name: "All Commands  :",
                         value:
-                            "`1.` -help\n`2.` -avatar \n`3.` -ping \n`4.` -server \n`5.` -me \n" +
-                            "`6.` -play\n`7.` -skip \n`8.` -pause \n`9.` -queue \n`10.` -resume \n" +
-                            "`11.` -volume\n`12.` -leave \n`13.` -clearqueue "
+                            "`1.` -help\n`2.` -avatar \n`3.` -ping \n`4.` -server \n`5.` -me \n`6.` -play\n`7.` -skip \n`8.` -pause \n`9.` -queue \n`10.` -resume \n`11.` -volume\n`12.` -leave \n`13.` -clearqueue "
                     
                     }]
                 }
             })
         }).catch(console.error)
-        message.react('??')
+        message.react('😄')
     }
 
     if (command === 'ping') {
