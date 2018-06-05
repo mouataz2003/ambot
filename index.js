@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const music = require('discord.js-music-v11');
 const bot = new Discord.Client();
-const { prefix, token } = require('./config.json')
+const { prefix } = require('./config.json')
 
 bot.on('ready', () => {
     console.log(`[Start] ${new Date()}`);
@@ -78,4 +78,4 @@ bot.on('message', message => {
 
 })
 
-bot.login(token);
+bot.login('NDUzMzI5MjYwODc5NTQ0MzIx.DfdTSg._MxlsUWKjHoflK9L4RMeg6aqIDU');
