@@ -11,12 +11,7 @@ bot.on('ready', () => {
 bot.on('message', message => {
 
 
-    if (!message.content.startsWith(prefix) || message.author.bot) return
-
-    const args = message.content.slice(prefix.length).split(' ')
-    var command = args.shift().toLowerCase();
-
-    if (command === 'avatar') {
+    if (message.content === 'avatar') {
         if (!message.mentions.users.size) {
             return message.channel.send(`Your avatar: ${message.author.displayAvatarURL}`);
         }
@@ -27,7 +22,7 @@ bot.on('message', message => {
         message.channel.send(avatarList)
     }
 
-    if (command === 'help') {
+    if (message.content === 'help') {
         message.channel.send(" go check your Direct Message 😄")
         message.author.createDM().then(channel => {
             return channel.send({
@@ -45,7 +40,7 @@ bot.on('message', message => {
         message.react('😄')
     }
 
-    if (command === 'ping') {
+    if (message.content === 'ping') {
         let startTime = Date.now();
         var embed = new Discord.RichEmbed()
             .setColor("RANDOM")
@@ -56,11 +51,11 @@ bot.on('message', message => {
         message.channel.send('*Calcul du ping...*').then(m => m.edit(embed))
     }
 
-    if (command === 'server'){
+    if (message.content === 'server'){
         message.channel.send(`Name : \n ${message.guild.name}\n\nMembers: \n ${message.guild.memberCount}`)
     }
 
-    if (command === 'me') {
+    if (message.content === 'me') {
         message.channel.send(`Ton nom : ${message.author.username}`)
     }
 
